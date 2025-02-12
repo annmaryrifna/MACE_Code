@@ -3,7 +3,7 @@ interface Comparable
     public double volume();
     int compareByVolume(Comparable other);
 }
-class Cuboid
+class Cuboid implements Comparable
 {
     double l,w,h;
     Cuboid(double l,double w,double h)
@@ -30,7 +30,7 @@ class Cuboid
         return "Cuboid("+volume()+")";
     }
 }
-class Cylinder
+class Cylinder implements Comparable
  {
     double r,h;
     Cylinder(double r,double h)
@@ -64,10 +64,10 @@ class InterfaceDemo3
         Cylinder c2=new Cylinder(3,2);
         int result=c1.compareByVolume(c2);
         if (result >0)
-        System.out.println(c1 +"is larger than"+c2);
+        System.out.println(c1 +"is smaller than"+c2);
         else if(result < 0)
-        System.out.println(c2 +"is smaller than"+c1);
+        System.out.println(c2 +"is larger than"+c1);
         else
-         System.out.println(c1 +"is same"+c2);
+         System.out.println(c1 +"is the same as "+c2);
     }
 }
