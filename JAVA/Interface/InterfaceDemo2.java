@@ -1,3 +1,4 @@
+import java.util.Scanner;
 interface Printable
 {
     public void display();
@@ -78,12 +79,20 @@ class InterfaceDemo2
 {
     public static void main(String arg[])
     {
-     Rectangle r= new Rectangle(2,3);
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter length: ");
+     double length = sc.nextDouble();
+     System.out.print("Enter breadth : ");
+     double breadth = sc.nextDouble();
+    Rectangle r= new Rectangle(length,breadth);
      r.display();
      r.show();
      System.out.println("Area of Rectangle:"+r.area());
-          System.out.println("Volume of Rectangle:"+r.volume());
-               System.out.println("Perimeter of Rectangle:"+r.perimeter()+"\n");
+     System.out.println("Volume of Rectangle:"+r.volume());
+     System.out.println("Perimeter of Rectangle:"+r.perimeter()+"\n");
+
+     System.out.print("Enter radius  ");
+     double radius = sc.nextDouble();
     Circle c= new Circle(3);
      c.display();
      c.show();
