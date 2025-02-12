@@ -93,7 +93,7 @@ class InterfaceDemo2
 
      System.out.print("Enter radius  ");
      double radius = sc.nextDouble();
-    Circle c= new Circle(3);
+    Circle c= new Circle(radius);
      c.display();
      c.show();
      System.out.println("Area of Circle:"+c.area());
