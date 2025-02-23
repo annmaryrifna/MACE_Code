@@ -5,8 +5,8 @@ import java.util.Comparator;
 
 class Product
   {
-    private String name;
-    private double price;
+     String name;
+     double price;
 
     public Product(String name, double price) 
     {
